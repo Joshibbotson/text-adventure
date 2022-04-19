@@ -31,12 +31,17 @@ continueButton.addEventListener('click', game);
     }
 
     function playerNameCreation () {
-        let playerName = prompt("Tell us your name");
-        playerDialogue.textContent = `${playerName} is the name, don't wear it out!`
-        return playerName;
+        return  playerName = prompt("What is your name?");
     }
 
+    if (typeof playerName === 'string' || playerName instanceof String) {
     welcome();
+    }
+    else { 
+        welcome();
+    }
+    
+    
     function welcome () {
         playerDialogue.textContent = `My name is ${playerName}`
     }
